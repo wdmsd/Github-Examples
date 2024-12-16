@@ -51,10 +51,28 @@ we will need to create our new ssh key pair
 ```sh
 ssh-keygen -t ed25519 -C "mail@example.com"
 ```
-> Then we need to add the public key to github and add our private key 
 
+Then in new powershell window with admin access
 ```sh
+# start the ssh-agent in the background
+Get-Service -Name ssh-agent | Set-Service -StartupType Manual
+Start-Service ssh-agent
 ```
+In a new cmd window add our private key
+```sh
+ssh-add c:/Users/YOU/.ssh/id_ed25519
+```
+If you clone you repository in the beggining using https then you need to access you git config file and modify the url parametre
+
+### 3- Github Cli
+
+Download and install Cli from https://cli.github.com/
+
+Once it's installed add it to your local varial path 
+```sh
+gh auth login
+```
+
 
 
 ## Commit
@@ -93,12 +111,6 @@ the gitconfig file ìs what stores our global configuration for git such as emai
 
 ```sh
 git config --list
-```
-
-When we first install git on a machin we are supposed to set up a our name and email 
-```sh
-git config --globale user.name "Msd Wd"
-git config --globale user.email "msd.wd@gmail.com"
 ```
 
 ## Log
