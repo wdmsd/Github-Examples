@@ -15,6 +15,9 @@ code Readme.md
 git status
 git add . 
 # we can remove everything by using git reset
+
+
+waaaaaaaaaaaaaaaaaaaqwwww
 git reset
 git add Readme.md
 # make changes to Readme.md
