@@ -18,7 +18,8 @@ git add .
 git reset
 git add Readme.md
 # make changes to Readme.md
-git commit -m "add readme file"    
+git commit -m "add readme file"  
+
 ```
 ## Cloning
 We can clone using three ways : HTTPS, SSH, GitHub Cli.
@@ -72,9 +73,6 @@ Once it's installed add it to your local varial path
 ```sh
 gh auth login
 ```
-
-
-
 ## Commit
 
 When we want to commit code `git commit` which will open up the commit edit message in the editor of choice
@@ -84,7 +82,49 @@ git commit
 # commit with a message without opening an editor
 git commit -m "add your message here"
 ```
+## Branches
 
+List of branches
+```
+git branch
+```
+Create a new branch
+```
+git branch branch-name
+```
+
+Checkout the branch
+```
+git checkout dev
+```
+
+## Remotes
+
+We can add remote but offten we will just add remote via upstream when adding a branch 
+
+```sh
+git remote add ...
+git branch -u origin new-feature
+```
+
+## Stashing
+
+
+```sh
+git stash list
+git stash
+git stash save my-name
+git stash apply
+git stash pop
+```
+
+
+## Merging
+
+```sh
+git checkout dev
+git merge main
+```
 
 ## ADD
 When we want to stage that will be inculded in the commit we can use `.` to add all possible files 
