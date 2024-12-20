@@ -78,10 +78,28 @@ gh auth login
 When we want to commit code `git commit` which will open up the commit edit message in the editor of choice
 
 ```sh
-git commit
-# commit with a message without opening an editor
-git commit -m "add your message here"
+# files to be staged
+git add my_file
+git add . # add all files
+git rm my_folder file # remove a specific file
+
+# commit a staged changes with a message
+git commit -m "commit message"
+
+# automatically stage all tracked, modified files before the commit
+git commit -a -m "commit message"
+
+# modifies the most recent commit 
+git commit --amend
+
+# creates empty commit, useful as a placeholder
+git commit -m "initial commit" --allow-empty
+
+# commit with a specified author
+git commit -m "Message" --author="Author name <author@mail.com>" 
+
 ```
+
 ## Branches
 
 List of branches
